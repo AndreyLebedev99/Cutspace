@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<svg style="display: none;">
+
+		<symbol id="buyersIcon" viewBox="0 0 70 70">
+			<g>f
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M27.3453 24.552L24.3061 27.3064C26.4592 29.9887 29.374 32.2086 32.9494 32.9195V37.0803H37.0509V33.2026C40.956 32.9356 44.9176 29.99 45.582 26.0752C46.5093 20.7601 41.8484 17.5786 37.0509 16.1039V8.04844C39.1232 8.26309 41.4574 9.92354 43.1428 11.3681L45.6873 8.15111C43.3295 5.96211 39.4961 3.97654 37.0508 3.91256V0.00732422H32.9492V4.1432C29.7258 4.83363 27.0752 7.39465 26.6444 10.536C26.2523 15.0449 28.3589 17.2827 32.9492 18.8772V28.6894C29.3537 27.722 27.3453 24.552 27.3453 24.552ZM30.7013 11.1398C30.8798 9.93981 31.7063 8.96008 32.9492 8.43891V14.4279C30.6511 13.6765 30.533 12.2695 30.7013 11.1398ZM37.0508 29.0771C39.6106 28.7075 41.5442 27.0117 41.5442 25.3542C41.5442 22.0086 37.5377 20.6588 37.0876 20.5071C37.0692 20.5009 37.0568 20.4967 37.0508 20.4945V29.0771Z">
+				</path>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M62.9394 56.477V48.9702L63.8468 49.5146L65.9572 45.9975L51.4746 37.3081L36.992 45.9977L39.1024 49.5148L40.0098 48.9704V56.4772H29.9904V48.9704L30.8978 49.5148L33.0081 45.9977L18.5254 37.3081L4.04277 45.9977L6.15316 49.5148L7.06057 48.9704V56.4772H0V60.5787H70V56.4772H62.9394V56.477ZM20.5762 56.477V51.4672H16.4746V56.477H11.1621V46.5093L18.5254 42.0912L25.8887 46.5093V56.477H20.5762ZM53.5254 51.4672V56.477H58.8379V46.5093L51.4746 42.0912L44.1113 46.5093V56.477H49.4238V51.4672H53.5254Z" />
+				<path d="M0 65.8911H70V69.9927H0V65.8911Z" />
+			</g>
+		</symbol>
+
+		<symbol id="sellerIcon">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M44.1291 9.47871H70V46.5295H44.1293V70H25.8709V46.5295H0V9.47871H25.8709V5.4775L35 0L44.1291 5.4775V9.47871ZM35 4.78311L29.9724 7.79967H29.9723V9.47857H40.0276V7.79967L35 4.78311ZM40.0276 65.8984H29.9723V46.5295H40.0276V65.8984ZM4.10156 42.4279H65.8984V13.5803H4.10156V42.4279Z" />
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M27.0711 33.2502L25.5651 37.2041L21.7322 35.7444L28.1006 19.0238L31.5056 19.0203L37.8199 35.7525L33.9826 37.2006L32.4919 33.2502H27.0711ZM28.6334 29.1487H30.9441L29.7941 26.1012L28.6334 29.1487Z" />
+				<path d="M48.2624 32.5099H43.473V18.844H39.3715V36.6114H48.2624V32.5099Z" />
+				<path
+					d="M60.4445 32.5098H54.7341V29.8352H60.0234V25.7336H54.7341V23.0588H60.4445V18.9573H50.6326V36.6114H60.4445V32.5098Z" />
+				<path
+					d="M14.4225 23.0678C15.9685 22.382 18.2923 24.0499 19.5359 25.17L22.0805 21.9531C18.3441 18.535 15.2096 18.5089 13.2177 19.147C11.233 19.7464 9.82463 21.3159 9.53574 23.2573C9.25834 25.121 10.0587 26.9133 11.6248 27.9342C11.8963 28.1112 13.7677 28.911 16.014 29.7538C16.8487 30.0615 17.7009 30.6126 17.5896 31.2358C17.4978 31.7496 16.7818 32.5097 15.5361 32.5097C13.5222 32.6266 12.0289 30.9845 10.9122 29.6363L7.87311 32.3907C9.74971 34.7916 12.2987 36.6792 15.5362 36.6113C18.5841 36.6113 21.1458 34.6538 21.6274 31.9567C21.9922 29.9139 21.0821 27.2513 17.4334 25.9055C15.813 25.3078 14.3003 24.6581 13.7753 24.429C13.4052 23.9655 13.5457 23.426 14.4225 23.0678V23.0678Z" />
+			</g>
+		</symbol>
+
+		<symbol id="performanceIcon" viewBox="0 0 40 30">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M33.7173 27.7317V6.82935L36.6967 3.87194V7.66095H38.9819V0H31.2636V2.26819H35.0809L31.1246 6.19509L25.7973 0.907425L13.0016 13.6081L7.83141 8.47628L0.54511 15.7085L2.16094 17.3123L5.47511 14.0228V27.7318H0.0961533V30H39.0962V27.7318H33.7173V27.7317ZM27.6235 5.92775V27.7317H22.643V7.24602L25.7973 4.11517L27.6235 5.92775ZM13.0016 16.8159L11.5688 15.3936V27.7317H16.5493V13.2945L13.0016 16.8159Z" />
+			</g>
+		</symbol>
+
+		<symbol id="entrepreneurshipIcon" viewBox="0 0 23 30">
+			<g>
+				<path d="M15.75 0H22.5V7.5H15.75V0Z" />
+				<path d="M0 0H6.75V7.5H0V0Z" />
+				<ellipse cx="11.625" cy="21" rx="4.125" ry="3.75" />
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M2.25 21.375C2.25 16.6116 6.27941 12.75 11.25 12.75C16.2206 12.75 20.25 16.6116 20.25 21.375C20.25 26.1384 16.2206 30 11.25 30C6.27941 30 2.25 26.1384 2.25 21.375ZM5.39313 21.375C5.39313 24.4699 8.02055 26.9878 11.25 26.9878C14.4795 26.9878 17.1069 24.4699 17.1069 21.375C17.1069 18.2801 14.4795 15.7622 11.25 15.7622C8.02055 15.7622 5.39313 18.28 5.39313 21.375Z" />
+				<path
+					d="M7.34766 11.3905C8.12223 11.0495 8.92592 10.8114 9.75 10.6768L8.13937 9H1.5L5.10209 12.75C5.791 12.2009 6.54211 11.7453 7.34766 11.3905Z" />
+				<path
+					d="M12.75 10.6768C13.5741 10.8113 14.3778 11.0494 15.1523 11.3905C15.9579 11.7452 16.709 12.2008 17.3979 12.75L21 9H14.3606C13.9268 9.45163 13.3201 10.0832 12.75 10.6768Z" />
+			</g>
+		</symbol>
+
+		<symbol id="authenticityIcon" viewBox="0 0 22 30">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M5.42511 20.1036C5.42511 17.0534 7.90667 14.5718 10.957 14.5718C14.0073 14.5718 16.4889 17.0534 16.4889 20.1036C16.4889 23.1539 14.0073 25.6355 10.957 25.6355C7.90673 25.6355 5.42511 23.1539 5.42511 20.1036ZM7.12245 20.7647L9.8596 23.5018L14.7915 18.5699L13.5485 17.327L9.8596 21.0159L8.3654 19.5217L7.12245 20.7647Z" />
+				<path
+					d="M16.5768 3.42322H14.3803C14.3802 1.53264 12.8476 0 10.957 0C9.06642 0 7.53378 1.53264 7.53378 3.42322H5.33722V7.81148H16.5767V3.42322H16.5768Z" />
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M18.3346 9.56941V3.42334H21.8736V30.0001H0.0404053V3.42334H3.57941V9.56941H18.3346ZM3.6673 20.1039C3.6673 24.1234 6.93742 27.3936 10.957 27.3936C14.9766 27.3936 18.2467 24.1234 18.2467 20.1039C18.2467 16.0844 14.9765 12.8142 10.957 12.8142C6.93748 12.8142 3.6673 16.0843 3.6673 20.1039Z" />
+			</g>
+		</symbol>
+
+		<symbol id="kindnessIcon" viewBox="0 0 37 30">
+			<g>
+				<path
+					d="M34.2621 10.8582H26.8782C24.6847 10.8582 22.9066 12.6363 22.9066 14.8298V26.0229C22.9066 28.2164 24.6847 29.9946 26.8782 29.9946H35.1644L36.5631 13.3609C36.6764 12.0139 35.6137 10.8582 34.2621 10.8582Z" />
+				<path
+					d="M18.935 0.00537109H17.0918L16.3796 8.83266C16.1773 11.3401 14.0833 13.2719 11.5677 13.2719H10.1838V27.5808H14.8753C14.8753 27.615 14.8753 27.6491 14.8752 27.6829C14.8738 28.9593 15.908 29.9945 17.1844 29.9945H22.2349C21.3189 28.9252 20.7637 27.538 20.7637 26.0229V14.8297C20.7637 12.9734 21.5963 11.3087 22.9066 10.1864V3.97694C22.9066 1.78351 21.1284 0.00537109 18.935 0.00537109V0.00537109Z" />
+				<path d="M0 11.8372H8.04093V29.0153H0V11.8372Z" />
+			</g>
+		</symbol>
+
+		<symbol id="playIcon" viewBox="0 0 14 15">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd"
+					d="M13.2111 6.60557C13.9482 6.9741 13.9482 8.0259 13.2111 8.39443L1.44721 14.2764C0.782312 14.6088 0 14.1253 0 13.382V1.61803C0 0.874653 0.782312 0.391156 1.44721 0.723607L13.2111 6.60557Z" />
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<div class="nav">
+			<div class="nav__container">
+				<div class="logo">
+					<img src="img/logo.svg" alt="LOGO">
+					<div class="logo__name">CutSpace</div>
+				</div>
+
+				<nav class="navigation" id="nav">
+					<ul class="nav__list">
+						<li><a class="nav__link active__link" href="#!">Home</a></li>
+						<li><a class="nav__link" href="#!">About us</a></li>
+						<li><a class="nav__link" href="#!">Find space</a></li>
+						<li><a class="nav__link" href="#!">Share space</a></li>
+						<li><a class="nav__link" href="#!">Promote space</a></li>
+					</ul>
+				</nav>
+
+				<div class="icon-menu">
+					<a href="#" class="icon-menu__button" id="navToggle"></a>
+				</div>
+			</div>
+		</div>
+
+		<header class="header">
+			<div class="header__container">
+				<div class="header__row">
+					<div class="header__text">
+						<h1 class="header__title">Find your custom matched commercial real estate space.</h1>
+						<p>In oculis quidem exercitus quid ex ea consequatur? autem vel eum fugiat, quo pertineant ero
+							tibique</p>
+
+						<form class="header__form form">
+							<label class="form__lable">
+								<input class="form__input" type="text" placeholder="Your email address">
+							</label>
+							<button class="form__button button" type="button">Subscribe</button>
+						</form>
+					</div>
+
+					<div class="header__img">
+						<img src="img/img.jpg" alt="house">
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		<section class="clients">
+			<div class="clients__container">
+				<div class="clients__items">
+					<img src="img/clients/01.svg" alt="client1">
+					<img src="img/clients/02.svg" alt="client2">
+					<img src="img/clients/03.svg" alt="client3">
+					<img src="img/clients/04.svg" alt="client4">
+				</div>
+			</div>
+		</section>
+
+		<section class="objects">
+			<div class="objects__container">
+				<div class="objects__row">
+					<div class="objects__imgs">
+						<img class="objects__img1" src="img/cards/01.jpg" alt="Card1">
+						<img class="objects__img2" src="img/cards/02.jpg" alt="Card2">
+						<div class="card__info">
+							<div class="card__icon">
+								<img src="img/icons/building.svg" alt="house">
+							</div>
+							<div class="card__body">
+								<h4>Twelve West Lake</h4>
+								<p>Space for up to 150 people</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="objects__text">
+						<h2 class="objects__title title">We provide best space for you!</h2>
+						<p>Quid ex eo ortum, tam inportuno tamque crudeli; sin, ut aliquid ex ea quid est et via
+							procedat oratio quaerimus.</p>
+						<p>quid aut ad id omnia referri oporteat, ipsum autem nusquam hoc epicurus in ea commodi
+							consequatur?</p>
+						<a href="#!" class="objects__link button">Learn more</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta">
+			<div class="cta__container">
+				<div class="cta__body">
+					<div class="cta__img">
+						<img src="img/dashboard.jpg" alt="">
+					</div>
+					<div class="cta__text">
+						<h2 class="title">Start using our product</h2>
+						<p>Quid ex eo ortum, tam inportuno tamque crudeli; sin, ut aliquid ex</p>
+						<div class="cta__btns">
+							<a href="#!" class="button">Contact Us</a>
+							<a href="#!" class="cta__link button button-white">Watch now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="serve">
+			<div class="serve__container">
+				<div class="serve__header">
+					<h2 class="title">Who do we serve?</h2>
+					<p>Every buyer and seller of tech and services in the world.</p>
+				</div>
+
+				<div class="serve__body">
+					<div class="serve__item">
+						<svg>
+							<use xlink:href="#buyersIcon"></use>
+						</svg>
+						<h3 class="title">Buyers</h3>
+						<p>Torquem detraxit hosti et quidem se texit, ne ad eam.</p>
+						<a class="serve__button button button-white" href="#!">Get Started</a>
+					</div>
+
+					<div class="serve__item">
+						<svg>
+							<use xlink:href="#sellerIcon"></use>
+						</svg>
+						<h3 class="title">Seller</h3>
+						<p>Torquem detraxit hosti et quidem se texit, ne ad eam.</p>
+						<a class="serve__button button button-white" href="#!">Get Started</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="benefits">
+			<div class="benefits__container">
+				<div class="benefits__header">
+					<h2 class="title">Why choose us?</h2>
+				</div>
+
+				<div class="benefits__row">
+					<div class="benefits__item">
+						<div class="benefits__img">
+							<svg>
+								<use xlink:href="#performanceIcon"></use>
+							</svg>
+						</div>
+						<h3>Performance</h3>
+						<p>Torquem detraxit hosti et quidem se texit, ne ad.</p>
+					</div>
+
+					<div class="benefits__item">
+						<div class="benefits__img">
+							<svg>
+								<use xlink:href="#entrepreneurshipIcon"></use>
+							</svg>
+						</div>
+						<h3>Entrepreneurship</h3>
+						<p>Torquem detraxit hosti et quidem se texit, ne ad.</p>
+					</div>
+
+					<div class="benefits__item">
+						<div class="benefits__img">
+							<svg>
+								<use xlink:href="#authenticityIcon"></use>
+							</svg>
+						</div>
+						<h3>Authenticity</h3>
+						<p>Torquem detraxit hosti et quidem se texit, ne ad.</p>
+					</div>
+
+					<div class="benefits__item">
+						<div class="benefits__img">
+							<svg>
+								<use xlink:href="#kindnessIcon"></use>
+							</svg>
+						</div>
+						<h3>Kindness</h3>
+						<p>Torquem detraxit hosti et quidem se texit, ne ad.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="testimonual">
+			<div class="testimonual__container">
+
+				<div class="testimonual__header">
+					<div class="testimonual__title">
+						<h2 class="title">Thanks for your nice words to us</h2>
+					</div>
+
+					<div class="testimonual__subtitle">
+						<p>Si sine causa, nollem me tamen laudandis maioribus meis corrupisti nec voluptas</p>
+					</div>
+				</div>
+
+				<div class="testimonual__body">
+					<div class="item-testymonial">
+						<div class="item-testymonial__img">
+							<div class="item-testymonial__btn">
+								<button class="item-testymonial__btn-play">
+									<svg>
+										<use xlink:href="#playIcon"></use>
+									</svg>
+								</button>
+							</div>
+
+							<img src="img//testimonial/01.jpg" alt="person1">
+						</div>
+
+						<div class="item-testymonial__content">
+							<p>"Omne animal, simul atque integre iudicante itaque earum motus et."</p>
+							<div class="testymonial__profil">
+								<h4 class="autor">Arend Pellewever</h4>
+								<p class="city">Baltimore</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="testymonual__item item-testymonial">
+						<div class="item-testymonial__img">
+							<div class="item-testymonial__btn">
+								<button class="item-testymonial__btn-play">
+									<svg>
+										<use xlink:href="#playIcon"></use>
+									</svg>
+								</button>
+							</div>
+
+							<img src="img//testimonial/02.jpg" alt="person2">
+						</div>
+
+						<div class="item-testymonial__content">
+							<p>"In quo quaerimus, non emolumento aliquo, sed quia voluptas sit."</p>
+							<div class="testymonial__profil">
+								<h4 class="autor">Leo Knight</h4>
+								<p class="city">Cleveland</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="item-testymonial">
+						<div class="item-testymonial__img">
+							<div class="item-testymonial__btn">
+								<button class="item-testymonial__btn-play">
+									<svg>
+										<use xlink:href="#playIcon"></use>
+									</svg>
+								</button>
+							</div>
+
+							<img src="img//testimonial/03.jpg" alt="person3">
+						</div>
+
+						<div class="item-testymonial__content">
+							<p>"Filium morte multavit si sine causa? quae fuerit causa, nollem."</p>
+							<div class="testymonial__profil">
+								<h4 class="autor">Lisanne Viscaal</h4>
+								<p class="city">Lyon</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="contacts">
+			<div class="contacts__container">
+				<div class="contacts__info">
+					<div class="contacts__text">
+						<h2 class="title">Get experience from the expert</h2>
+						<p>Quid ex eo ortum, tam inportuno tamque crudeli; sin, ut aliquid ex</p>
+					</div>
+					<div class="contacts__btn">
+						<a class="contacts__button button button-white" href="#!">Contact Us</a>
+					</div>
+				</div>
+
+				<div class="contacts__img">
+					<img src="img/contacts/woman.png" alt="">
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="footer__container">
+
+				<div class="footer__body">
+					<div class="footer__info">
+						<div class="logo">
+							<img src="img/logo.svg" alt="LOGO">
+							<div class="logo__name">CutSpace</div>
+						</div>
+
+						<div class="footer__text">
+							<p>Quae fuerit causa, nollem me ab illo inventore veritatis et.</p>
+						</div>
+
+						<div class="footer__social">
+							<a href="#!"><img src="img/social/facebook.svg" alt="facebook"></a>
+							<a href="#!"><img src="img/social/twitter.svg" alt="twitter"></a>
+							<a href="#!"><img src="img/social/youtube.svg" alt="youtube"></a>
+							<a href="#!"><img src="img/social/linkedin.svg" alt="linkedin"></a>
+						</div>
+					</div>
+
+					<div class="footer__items">
+						<div class="item-footer">
+							<h4 class="item-footer__title">Privacy</h4>
+							<ul class="item-footer__list">
+								<li>Si sine causa</li>
+								<li>Quae fuerit causa</li>
+								<li>Certe, inquam</li>
+								<li>Torquatos nostros?</li>
+							</ul>
+						</div>
+						<div class="footer__item item-footer">
+							<h4 class="item-footer__title">Legal</h4>
+							<ul class="item-footer__list">
+								<li>Ut placet, inquam </li>
+								<li>Certe, inquam</li>
+								<li>Et quidem rerum</li>
+								<li>At vero eos et</li>
+							</ul>
+						</div>
+						<div class="footer__item item-footer">
+							<h4 class="item-footer__title">Contact</h4>
+							<ul class="item-footer__list">
+								<li>Primum igitur</li>
+								<li>Certe, inquam</li>
+								<li>Quae fuerit causa</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="js/script.js"></script>
+	</div>
+
+</body>
+
+</html>

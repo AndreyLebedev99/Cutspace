@@ -1,0 +1,47 @@
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+	color: inherit;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: inherit;
+}
+
+
+input, button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+ul, li {
+	list-style: none;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+input:focus, button:focus {
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+	font-family: inherit;
+	font-style: inherit;
+	background: none;
+}
